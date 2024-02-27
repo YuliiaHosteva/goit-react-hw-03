@@ -39,11 +39,12 @@ const App = () => {
     actions.resetForm();
   };
 
-  const handleDeleteContact = (evt) => {
-    setContactList(
-      contactList.filter((contact) => contact.id !== evt.target.id)
+  const handleDeleteContact = (contactId) => {
+    setContactList((prevContacts) =>
+      prevContacts.filter((contact) => contact.id !== contactId)
     );
   };
+  
 
   return (
     <div className={css.container}>

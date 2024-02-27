@@ -5,7 +5,8 @@ import css from '../Contact/Contact.module.css';
 
 const Contact = ({
   contact: { id, name, number },
-  deleteContact}) => {
+  handleDeleteContact
+}) => {
   return (
     <div className={css.listItem}>
       <ul className={css.infoBlock}>
@@ -18,11 +19,10 @@ const Contact = ({
           <p>{number}</p>
         </li>
       </ul>
-      <button className={css.button} onClick={deleteContact} id={id}>
-        Delete
-      </button>
+      <button className={css.button} onClick={() => handleDeleteContact(id)}>Delete</button>
     </div>
   );
 };
+
 
 export default Contact;
