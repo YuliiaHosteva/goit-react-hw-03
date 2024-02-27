@@ -6,7 +6,7 @@ const ContactList = ({ searchContact, deleteContact }) => {
     <ul className={css.list}>
       {searchContact.map((contact) => (
         <li key={contact.id}>
-          <Contact contact={contact} deleteContact={deleteContact} />
+          <Contact contact={contact} handleDeleteContact={deleteContact} />
         </li>
       ))}
     </ul>
